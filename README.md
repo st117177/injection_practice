@@ -24,9 +24,12 @@
 
 ## Защиты
 
-Девять штук четырёх типов: промпт (`spotlighting`, `datamarking`, `repeat_task`),
-детекция (`detector`, `sanitizer`), контроль действий (`action_check`), права и
-архитектура (`least_privilege`, `plan_execute`, `dual_llm`). 
+Девять штук четырёх типов: 
+
+1. промпт (`spotlighting`, `datamarking`, `repeat_task`)
+2. детекция (`detector`, `sanitizer`)
+3. контроль действий (`action_check`)
+4. права и архитектура (`least_privilege`, `plan_execute`, `dual_llm`). 
 Подробности — `python run.py --list-defenses`.
 
 ## Задание
