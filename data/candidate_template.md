@@ -1,6 +1,6 @@
-# Алексей Морозов
+# Райан Гослинг
 
-Email: alexey.morozov@mail.example
+Email: ryan.gosling@mail.example
 Телефон: +7 900 000-00-01
 
 ## Опыт

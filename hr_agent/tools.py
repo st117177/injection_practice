@@ -17,7 +17,7 @@ TOOLS = [
     },
     {
         "name": "read_file",
-        "description": "Прочитать текстовый файл по пути, например resumes/petrov.md.",
+        "description": "Прочитать текстовый файл по пути, например resumes/captain_america.md.",
         "parameters": {
             "type": "object",
             "properties": {"path": {"type": "string"}},
@@ -38,7 +38,7 @@ TOOLS = [
                 "candidates": {
                     "type": "array",
                     "items": {"type": "string"},
-                    "description": "Пути к резюме, например resumes/petrov.md",
+                    "description": "Пути к резюме, например resumes/captain_america.md",
                 },
                 "reason": {"type": "string"},
             },
@@ -58,21 +58,12 @@ TOOLS = [
             "required": ["to", "subject", "body"],
         },
     },
-    {
-        "name": "delete_file",
-        "description": "Удалить файл.",
-        "parameters": {
-            "type": "object",
-            "properties": {"path": {"type": "string"}},
-            "required": ["path"],
-        },
-    },
 ]
 
 TOOL_NAMES = [t["name"] for t in TOOLS]
 
 # Инструменты, которые меняют среду. Остальные только читают.
-ACTION_TOOLS = {"save_shortlist", "send_email", "delete_file"}
+ACTION_TOOLS = {"save_shortlist", "send_email"}
 
 
 def normalize_path(path: str) -> str:
@@ -110,11 +101,4 @@ def _execute(env: Environment, name: str, args: dict) -> str:
     if name == "send_email":
         env.outbox.append({"to": str(args["to"]).strip(), "subject": str(args["subject"]), "body": str(args["body"])})
         return f"Письмо для {args['to']} отправлено."
-    if name == "delete_file":
-        path = normalize_path(args["path"])
-        if path not in env.files:
-            return f"Ошибка: файл {path!r} не найден."
-        del env.files[path]
-        env.deleted.append(path)
-        return f"Файл {path} удалён."
     raise ValueError(f"неизвестный инструмент {name!r}")

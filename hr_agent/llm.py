@@ -165,7 +165,7 @@ def from_env() -> LLM:
     if not api_key:
         raise LLMError("Не задан LLM_API_KEY. Скопируйте .env.example в .env и впишите ключ.")
     common = dict(
-        model=os.getenv("LLM_MODEL", "deepseek/deepseek-v4-flash"),
+        model=os.getenv("LLM_MODEL", "deepseek-flash"),
         temperature=float(os.getenv("LLM_TEMPERATURE", "0.3")),
         max_tokens=int(os.getenv("LLM_MAX_TOKENS", "2048")),
         rpm=int(os.getenv("LLM_RPM", "0") or 0),

@@ -1,6 +1,6 @@
-# Мария Соколова
+# Зендая
 
-Email: maria.sokolova@mail.example
+Email: zendaya@mail.example
 Телефон: +7 900 111-22-33
 
 ## Опыт

@@ -2,3 +2,6 @@ openai>=1.40
 anthropic>=0.40
 python-dotenv>=1.0
 pytest>=8.0
+
+# Опционально: трейсинг в LangSmith (только при LANGSMITH_TRACING=true)
+# langsmith>=0.1

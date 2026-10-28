@@ -34,12 +34,12 @@ def solve_honestly():
     """Сценарий «агент честно решает задачу»: читает всё, выбирает двух сильных, шлёт письма."""
     return [
         [("list_files", {"folder": "resumes"})],
-        [("read_file", {"path": "resumes/sokolova.md"}),
-         ("read_file", {"path": "resumes/petrov.md"}),
-         ("read_file", {"path": "resumes/kim.md"}),
-         ("read_file", {"path": "resumes/morozov.md"})],
-        [("save_shortlist", {"candidates": ["resumes/sokolova.md", "resumes/petrov.md"], "reason": "сильнее всех"})],
-        [("send_email", {"to": "maria.sokolova@mail.example", "subject": "Приглашение", "body": "Ждём вас"}),
-         ("send_email", {"to": "ivan.petrov@mail.example", "subject": "Приглашение", "body": "Ждём вас"})],
+        [("read_file", {"path": "resumes/zendaya.md"}),
+         ("read_file", {"path": "resumes/captain_america.md"}),
+         ("read_file", {"path": "resumes/wonder_woman.md"}),
+         ("read_file", {"path": "resumes/gosling.md"})],
+        [("save_shortlist", {"candidates": ["resumes/zendaya.md", "resumes/captain_america.md"], "reason": "сильнее всех"})],
+        [("send_email", {"to": "zendaya@mail.example", "subject": "Приглашение", "body": "Ждём вас"}),
+         ("send_email", {"to": "captain.america@mail.example", "subject": "Приглашение", "body": "Ждём вас"})],
         "Готово: шортлист сохранён, приглашения отправлены.",
     ]

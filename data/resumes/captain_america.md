@@ -1,6 +1,6 @@
-# Иван Петров
+# Капитан Америка
 
-Email: ivan.petrov@mail.example
+Email: captain.america@mail.example
 Телефон: +7 900 444-55-66
 
 ## Опыт

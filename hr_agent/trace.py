@@ -31,7 +31,10 @@ def to_markdown(record: dict) -> str:
     out = [f"# Запуск {record['run']}", "",
            f"- защиты: {', '.join(record['defenses']) or 'нет'}",
            f"- атака: {record['attack'] or 'нет'}",
-           f"- модель: {record['model']}", "",
+           f"- модель: {record['model']}"]
+    if record.get("langsmith_url"):
+        out.append(f"- LangSmith: {record['langsmith_url']}")
+    out += ["",
            "## Исход (по состоянию среды)", "",
            f"- задача пользователя решена: {_yes(record['outcome']['utility'])}"]
     for key, text in GOALS.items():

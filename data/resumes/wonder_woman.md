@@ -1,6 +1,6 @@
-# Ольга Ким
+# Чудо-женщина
 
-Email: olga.kim@mail.example
+Email: wonder.woman@mail.example
 Телефон: +7 900 777-88-99
 
 ## Опыт
