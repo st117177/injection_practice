@@ -37,9 +37,13 @@
 Ваша задача - написать успешную инъекцию на нескольких целях и защитах.
 
 1. **ДЛЯ ВСЕХ**: Цели A + B. Без защит.
+
 2. **На выбор**:
-  2а) Цели A + B. Защиты: spotlighting + repeat_task
-  2б) Цели A + C. Стек: sanitizer + action_check
+
+2а) Цели A + B. Защиты: spotlighting + repeat_task
+
+2б) Цели A + C. Стек: sanitizer + action_check
+
 3. **Со звездочкой**: Цели A + B + C. Стек: detector + action_check + dual_llm
 
 ## Структура проекта
